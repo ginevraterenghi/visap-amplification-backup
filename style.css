@@ -643,6 +643,15 @@ section>article,
   z-index: 3;
 }
 
+.contribution-card:hover .contribution-card__title,
+.contribution-card:focus-visible .contribution-card__title,
+.contribution-card:hover .contribution-card__title span,
+.contribution-card:focus-visible .contribution-card__title span {
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .contribution-card__category {
   position: absolute;
   bottom: 0.85rem;
@@ -960,6 +969,10 @@ body>footer>nav>ul>li>a {
     max-width: none;
 
     margin: 0;
+  }
+
+  #program>div:nth-child(25)>p.submission-authors {
+    grid-column: 1 / 11;
   }
 
 
@@ -1420,7 +1433,7 @@ body>footer>nav>ul>li>a {
 
 .contribution-detail__nav-arrow:hover,
 .contribution-detail__nav-arrow:focus-visible {
-  color: #ffffff;
+  color: #b668dc;
   outline: none;
 }
 
@@ -1551,6 +1564,7 @@ body>footer>nav>ul>li>a {
 
   /* Subtle colour transition matching navigation arrows */
   a,
+  .link-coloured,
   .logo,
   #menu li a,
   #info a,
@@ -1594,6 +1608,14 @@ body>footer>nav>ul>li>a {
     color: var(--link-hover-color);
   }
 
+  /* Coloured links (lilac from palette) on hover & keyboard focus */
+  .link-coloured:hover,
+  .link-coloured:focus-visible,
+  #submissions a:hover,
+  #submissions a:focus-visible {
+    color: var(--purple) !important;
+  }
+
   /* Contribution cards: text turns white and badges invert to dark teal on hover */
   .contribution-card:hover,
   .contribution-card:focus-visible,
@@ -1614,5 +1636,14 @@ body>footer>nav>ul>li>a {
   .contribution-card:focus-visible .contribution-card__category span {
     background-color: var(--teal);
     color: var(--link-hover-color);
+  }
+
+  .contribution-card:hover .contribution-card__title,
+  .contribution-card:focus-visible .contribution-card__title,
+  .contribution-card:hover .contribution-card__title span,
+  .contribution-card:focus-visible .contribution-card__title span {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
   }
 }
